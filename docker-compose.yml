@@ -2,3 +2,5 @@ version: '3'
 services:
   clang:
     build: .
+    volumes:
+      - ./projectDir:/projectDir
