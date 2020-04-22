@@ -1,4 +1,4 @@
-
+#include <iostream>
 
 template<typename T>
 concept function_c = requires(T a) {
@@ -30,6 +30,7 @@ void f(T); // constrained C++20 function template
 // void f(T) requires Hashable<T>;
 
 int main() {
+  std::cout<<"main"<<std::endl;
   f(int{}); // Error: int does not satisfy function_c
   f(FuncOK{}); // OK, FuncOK satisfies function_c
   f(FuncOK{}); // OK, FuncOK satisfies function_c
